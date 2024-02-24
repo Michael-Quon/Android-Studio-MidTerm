@@ -2,4 +2,11 @@
     <string name="app_name">MichaelMidTerm</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_michael">MICHAEL</string>
+    <string name="tab_quon">QUON</string>
+    <string name="tab_n01565129">N01565129</string>
+    <string name="michael_quon_id">Michael Quon N01565129</string>
+    <string name="michael">MICHAEL</string>
+    <string name="quon">QUON</string>
+    <string name="n01565129">N01565129</string>
 </resources>
