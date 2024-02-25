@@ -22,6 +22,7 @@
     <string name="confirmrating">Confirm Rating</string>
     <string name="rating">"Rated: "</string>
     <string name="stars">" stars"</string>
+    <string name="counter">"Counter: "</string>
 
     <string-array name="Michael_emails">
         <item>123@123.com</item>
