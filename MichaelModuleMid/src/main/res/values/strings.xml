@@ -9,4 +9,21 @@
     <string name="michael">MICHAEL</string>
     <string name="quon">QUON</string>
     <string name="n01565129">N01565129</string>
+    <string name="michael_quon">Michael Quon</string>
+    <string name="enter_email">Enter email</string>
+    <string name="submit">Submit</string>
+    <string name="cannot_be_empty">Cannot Be Empty!</string>
+    <string name="invalid_email">Invalid Email!</string>
+    <string name="email">"Email: "</string>
+
+    <string-array name="Michael_emails">
+        <item>123@123.com</item>
+        <item>xyz@alphabet.com</item>
+        <item>OnePiece@anime.com</item>
+        <item>ceng258@class.com</item>
+        <item>nba@finals.com</item>
+        <item>2026worldcup@canadafifa.com</item>
+    </string-array>
+
+
 </resources>

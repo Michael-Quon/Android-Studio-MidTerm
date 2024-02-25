@@ -4,9 +4,7 @@ package michael.quon.n01565129;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
-
 import android.os.Bundle;
-import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -34,7 +32,7 @@ public class QuonActivity extends AppCompatActivity {
         TabLayout tabLayout = findViewById(R.id.MichaeltabLayout);
         new TabLayoutMediator(tabLayout, viewPager,
                 (tab, position) -> {
-                    // changed the tab name
+                    // change the tab name
                     switch (position) {
                         case 0:
                             tab.setText(R.string.michael);
