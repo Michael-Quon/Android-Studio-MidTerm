@@ -44,21 +44,27 @@ public class MichaelFragment extends Fragment {
     }
 
     private void onMichaelSubmitButtonClicked() {
-        String email = michaelEmailAutoCompleteEditText.getText().toString().trim();
+        String enteredEmail = michaelEmailAutoCompleteEditText.getText().toString().trim();
 
-        if (TextUtils.isEmpty(email)) {
+        if (TextUtils.isEmpty(enteredEmail)) {
             michaelEmailAutoCompleteEditText.setError(getString(R.string.cannot_be_empty));
-        } else if (!isValidEmail(email)) {
+        } else if (!isValidEmail(enteredEmail)) {
             michaelEmailAutoCompleteEditText.setError(getString(R.string.invalid_email));
         } else {
             // Pass to next tab/fragment
-            String message = getString(R.string.email) + email;
+            Bundle result = new Bundle();
+            result.putString(getString(R.string.emailrequestkey), enteredEmail);
+            getParentFragmentManager().setFragmentResult(getString(R.string.emailrequestkey), result);
+
+            // Show a Toast message
+            String message = getString(R.string.email) + enteredEmail;
             Toast.makeText(requireContext(), message, Toast.LENGTH_LONG).show();
 
             // Clear user input
             michaelEmailAutoCompleteEditText.setText("");
         }
     }
+
 
     private boolean isValidEmail(CharSequence validEmail) {
         return !TextUtils.isEmpty(validEmail) && Patterns.EMAIL_ADDRESS.matcher(validEmail).matches();
