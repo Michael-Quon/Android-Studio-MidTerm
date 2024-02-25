@@ -57,7 +57,7 @@ public class QuonFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int stars = (int) ratingBar.getRating();
+                float stars = ratingBar.getRating();
                 String message = getString(R.string.rating) + stars;
                 Snackbar.make(view, message, Snackbar.LENGTH_SHORT).show();
             }
