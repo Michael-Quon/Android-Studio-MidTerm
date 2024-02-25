@@ -1,7 +1,6 @@
 // Michael Quon N01565129
 package michael.quon.n01565129;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 import android.os.Bundle;
@@ -11,7 +10,7 @@ import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 
-public class QuonActivity extends AppCompatActivity {
+public class QuonActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

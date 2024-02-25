@@ -5,5 +5,5 @@
         android:id="@+id/Michaelaction_map"
         android:title="@string/map"
         android:icon="@drawable/ic_map"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
 </menu>
