@@ -1,28 +1,28 @@
 // Michael Quon N01565129
 package michael.quon.n01565129;
-
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+
 
 public class N01565129Fragment extends Fragment {
 
     private int counter = 0;
+    private boolean isCounterRunning = false;
+    private Handler handler;
 
-    public N01565129Fragment() {
-        // Required empty public constructor
-    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true); // Enable options menu for this fragment
+        handler = new Handler(Looper.getMainLooper()); // Handler to update UI from background thread
     }
 
     @Override
@@ -44,36 +44,42 @@ public class N01565129Fragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        // start counter when fragment resumes
         startCounter();
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        // stop counter when fragment pauses
         stopCounter();
     }
 
     private void startCounter() {
-        new Thread((new Runnable() {
+        isCounterRunning = true;
+        new Thread(new Runnable() {
             @Override
             public void run() {
-                while (true) {
+                while (isCounterRunning) {
                     try {
                         Thread.sleep(1000); // every second
                         counter++;
-                    }
-                    catch (InterruptedException e) {
+                        // Update UI with counter value
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+
+                            }
+                        });
+                    } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
             }
-        })).start();
+        }).start();
     }
 
     private void stopCounter() {
-        // stops counter, and displays toast with value of counter and name+id
+        isCounterRunning = false;
+        // Display toast with the final value of the counter
         Toast.makeText(requireContext(), getString(R.string.counter) + counter + getString(R.string.spacebar) + getString(R.string.michael_quon_id), Toast.LENGTH_LONG).show();
     }
 }
