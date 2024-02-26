@@ -1,34 +1,29 @@
 <!-- Michael Quon N01565129 -->
 <resources>
-    <string name="app_name">MichaelMidTerm</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="tab_michael">MICHAEL</string>
-    <string name="tab_quon">QUON</string>
-    <string name="tab_n01565129">N01565129</string>
-    <string name="michael_quon_id">Michael Quon N01565129</string>
-    <string name="michael">MICHAEL</string>
-    <string name="quon">QUON</string>
-    <string name="n01565129">N01565129</string>
-    <string name="michael_quon">Michael Quon</string>
-    <string name="enter_email">Enter email</string>
+    <string name="app_name" translatable="false">MichaelMidTerm</string>
+    <string name="michael_quon_id" translatable="false">Michael Quon N01565129</string>
+    <string name="michael" translatable="false">MICHAEL</string>
+    <string name="quon" translatable="false">QUON</string>
+    <string name="n01565129" translatable="false">N01565129</string>
+    <string name="michael_quon" translatable="false">Michael Quon</string>
+    <string name="enter_email">Enter Email</string>
     <string name="submit">Submit</string>
     <string name="cannot_be_empty">Cannot Be Empty!</string>
     <string name="invalid_email">Invalid Email!</string>
     <string name="email">"Email: "</string>
     <string name="no_data">NO DATA</string>
-    <string name="key">key</string>
-    <string name="emailrequestkey">emailrequestkey</string>
+    <string name="key" translatable="false">key</string>
+    <string name="emailrequestkey" translatable="false">emailrequestkey</string>
     <string name="confirmrating">Confirm Rating</string>
     <string name="rating">"Rated: "</string>
     <string name="stars">" stars"</string>
     <string name="counter">"Counter: "</string>
-    <string name="map">Map</string>
-    <string name="location">Location:</string>
-    <string name="comma">,</string>
+    <string name="map" translatable="false">Map</string>
+    <string name="location" translatable="false">Location:</string>
+    <string name="comma" translatable="false">,</string>
     <string name="access_denied">Michael Quon - Access Denied</string>
-    <string name="spacebar">" "</string>
-    <string name="clearinput" />
+    <string name="spacebar" translatable="false">" "</string>
+    <string name="clearinput" translatable="false" />
 
     <string-array name="Michael_emails">
         <item>123@123.com</item>

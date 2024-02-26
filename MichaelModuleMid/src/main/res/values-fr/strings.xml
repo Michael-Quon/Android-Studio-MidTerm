@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Michael Quon N01565129 -->
+<resources>
+    <string name="app_name">MichaelMidTerm</string>
+    <string name="enter_email">Entrez l\'e-mail</string>
+    <string name="submit">Soumettre</string>
+    <string name="cannot_be_empty">Ne peux pas être vide!</string>
+    <string name="invalid_email">Email invalide!</string>
+    <string name="email">E-mail:</string>
+    <string name="no_data">PAS DE DONNÉES</string>
+    <string name="confirmrating">Confirmer la note</string>
+    <string name="rating">Noté :</string>
+    <string name="stars">étoiles</string>
+    <string name="counter">Comptoir:</string>
+    <string name="access_denied">Michael Quon - Accès refusé</string>
+</resources>
