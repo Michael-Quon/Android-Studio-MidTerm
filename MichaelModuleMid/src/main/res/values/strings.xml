@@ -19,7 +19,7 @@
     <string name="stars">" stars"</string>
     <string name="counter">"Counter: "</string>
     <string name="map" translatable="false">Map</string>
-    <string name="location" translatable="false">Location:</string>
+    <string name="location" translatable="false">geo:</string>
     <string name="comma" translatable="false">,</string>
     <string name="access_denied">Michael Quon - Access Denied</string>
     <string name="spacebar" translatable="false">" "</string>
