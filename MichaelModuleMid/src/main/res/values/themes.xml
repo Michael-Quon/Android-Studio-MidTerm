@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.MichaelMidTerm" parent="Theme.Material3.DayNight.NoActionBar">
@@ -7,11 +8,19 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Add popup theme -->
+        <item name="popupTheme">@style/AppTheme.PopupOverlay</item>
     </style>
 
     <style name="Theme.MichaelMidTerm" parent="Base.Theme.MichaelMidTerm" />
 
     <style name="TabLayoutTextStyle" parent="TextAppearance.Design.Tab">
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Popup overlay style -->
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.Material3.Dialog">
+        <!-- Customize popup overlay attributes if needed -->
     </style>
 </resources>

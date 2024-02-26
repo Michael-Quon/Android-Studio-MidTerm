@@ -24,6 +24,11 @@
     <string name="stars">" stars"</string>
     <string name="counter">"Counter: "</string>
     <string name="map">Map</string>
+    <string name="location">Location:</string>
+    <string name="comma">,</string>
+    <string name="access_denied">Michael Quon - Access Denied</string>
+    <string name="spacebar">" "</string>
+    <string name="clearinput" />
 
     <string-array name="Michael_emails">
         <item>123@123.com</item>

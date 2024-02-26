@@ -1,7 +1,6 @@
 // Michael Quon N01565129
 package michael.quon.n01565129;
 
-// ViewPagerAdapter.java
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
@@ -27,4 +26,3 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
         return fragmentList.size();
     }
 }
-

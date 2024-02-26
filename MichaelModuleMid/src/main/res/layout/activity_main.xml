@@ -4,17 +4,27 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Michaeltoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <!-- TabLayout and ViewPager -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/MichaeltabLayout"
+        style="@style/TabLayoutTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabSelectedTextColor="@color/black"
-        app:tabSelectedTextAppearance="@style/TabLayoutTextStyle"
+        android:layout_below="@id/Michaeltoolbar"
+        app:tabBackground="@drawable/tab_background_selector"
         app:tabIndicatorColor="@color/tabIndicatorColor"
         app:tabIndicatorFullWidth="true"
-        style="@style/TabLayoutTextStyle"
-        app:tabBackground="@drawable/tab_background_selector"
-        android:layout_alignParentTop="true"/>
+        app:tabSelectedTextAppearance="@style/TabLayoutTextStyle"
+        app:tabSelectedTextColor="@color/black" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/MichaelviewPager"

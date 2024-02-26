@@ -6,7 +6,6 @@ import android.content.pm.PackageManager;
 import android.Manifest;
 import android.net.Uri;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -21,13 +20,15 @@ public class BaseActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
+        // Inflate menu; adds items to action bar if present
+        getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.Michaelaction_map) {
+        int id = item.getItemId();
+        if (id == R.id.Michaelaction_map) {
             // Check for location permission
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                     == PackageManager.PERMISSION_GRANTED) {
@@ -54,31 +55,19 @@ public class BaseActivity extends AppCompatActivity {
                 launchMap();
             } else {
                 // Permission denied, show toast
-                Toast.makeText(this, "Access Denied", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, (R.string.access_denied), Toast.LENGTH_SHORT).show();
             }
         }
     }
 
     private void launchMap() {
-        // Get the device's location (latitude and longitude)
-        // Replace these values with your actual latitude and longitude
-        double latitude = 37.7749;
-        double longitude = -122.4194;
+        // Humber College latitude and longitude
+        double latitude = 43.7288;
+        double longitude = 79.6066;
 
-        // Create a URI for the location
-        Uri gmmIntentUri = Uri.parse("geo:" + latitude + "," + longitude);
-
-        // Create an Intent to launch Google Maps
+        Uri gmmIntentUri = Uri.parse(getString(R.string.location) + latitude + getString(R.string.comma) + longitude);
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-        mapIntent.setPackage("com.google.android.apps.maps");
 
-        // Check if there's an activity to handle the intent
-        if (mapIntent.resolveActivity(getPackageManager()) != null) {
             startActivity(mapIntent);
-        } else {
-            Toast.makeText(this, "Google Maps not installed", Toast.LENGTH_SHORT).show();
-        }
     }
-
-
 }
