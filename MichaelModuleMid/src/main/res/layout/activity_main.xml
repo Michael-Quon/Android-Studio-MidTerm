@@ -6,7 +6,7 @@
 
     <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/Michaeltoolbar"
+        android:id="@+id/MicToolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
@@ -15,11 +15,11 @@
 
     <!-- TabLayout and ViewPager -->
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/MichaeltabLayout"
+        android:id="@+id/MicTabLayout"
         style="@style/TabLayoutTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/Michaeltoolbar"
+        android:layout_below="@id/MicToolbar"
         app:tabBackground="@drawable/tab_background_selector"
         app:tabIndicatorColor="@color/tabIndicatorColor"
         app:tabIndicatorFullWidth="true"
@@ -27,9 +27,9 @@
         app:tabSelectedTextColor="@color/black" />
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/MichaelviewPager"
+        android:id="@+id/MicViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/MichaeltabLayout" />
+        android:layout_below="@id/MicTabLayout" />
 
 </RelativeLayout>

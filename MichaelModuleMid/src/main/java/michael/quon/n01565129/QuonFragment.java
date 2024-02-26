@@ -21,7 +21,6 @@ public class QuonFragment extends Fragment {
 
     private TextView textView;
     private RatingBar ratingBar;
-    private Button button;
 
     public QuonFragment() {
         // Required empty public constructor
@@ -47,7 +46,7 @@ public class QuonFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.Michaelaction_map) {
+        if (id == R.id.Micaction_map) {
             // Handle map menu item click specific to this fragment
             return true;
         }
@@ -61,9 +60,9 @@ public class QuonFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_quon, container, false);
 
         // Initialize views
-        textView = view.findViewById(R.id.MichaeltextView);
-        ratingBar = view.findViewById(R.id.MichaelratingBar);
-        button = view.findViewById(R.id.Michaelratingbutton);
+        textView = view.findViewById(R.id.MicTextView);
+        ratingBar = view.findViewById(R.id.MicRatingBar);
+        Button button = view.findViewById(R.id.MicRatingbutton);
 
         // Set click listener for button
         button.setOnClickListener(new View.OnClickListener() {

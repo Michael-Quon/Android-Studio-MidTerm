@@ -8,7 +8,7 @@
     tools:context=".QuonFragment">
 
     <TextView
-        android:id="@+id/MichaeltextView"
+        android:id="@+id/MicTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="124dp"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RatingBar
-        android:id="@+id/MichaelratingBar"
+        android:id="@+id/MicRatingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="252dp"
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/Michaelratingbutton"
+        android:id="@+id/MicRatingbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="402dp"

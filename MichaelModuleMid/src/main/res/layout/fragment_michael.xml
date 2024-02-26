@@ -8,7 +8,7 @@
     tools:context=".MichaelFragment">
 
     <TextView
-        android:id="@+id/MichaelQuontextview"
+        android:id="@+id/MicTextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <AutoCompleteTextView
-        android:id="@+id/MichaelemailAutoCompleteEditText"
+        android:id="@+id/MicEmailAutoCompleteEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="236dp"
@@ -34,7 +34,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/Michaelsubmitbutton"
+        android:id="@+id/MicSubmitbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="388dp"

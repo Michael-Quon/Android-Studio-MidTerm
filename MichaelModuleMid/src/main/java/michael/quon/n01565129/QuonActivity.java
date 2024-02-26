@@ -18,7 +18,7 @@ public class QuonActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = findViewById(R.id.Michaeltoolbar);
+        Toolbar toolbar = findViewById(R.id.MicToolbar);
         setSupportActionBar(toolbar);
 
 
@@ -27,13 +27,13 @@ public class QuonActivity extends BaseActivity {
         fragmentList.add(new QuonFragment());
         fragmentList.add(new N01565129Fragment());
 
-        ViewPager2 viewPager = findViewById(R.id.MichaelviewPager);
+        ViewPager2 viewPager = findViewById(R.id.MicViewPager);
         viewPager.setAdapter(new ViewPagerAdapter(this, fragmentList));
 
         // Disable swiping
         viewPager.setUserInputEnabled(false);
 
-        TabLayout tabLayout = findViewById(R.id.MichaeltabLayout);
+        TabLayout tabLayout = findViewById(R.id.MicTabLayout);
         new TabLayoutMediator(tabLayout, viewPager,
                 (tab, position) -> {
                     // change the tab name

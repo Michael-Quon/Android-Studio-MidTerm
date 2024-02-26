@@ -32,7 +32,7 @@ public class MichaelFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.Michaelaction_map) {
+        if (id == R.id.Micaction_map) {
             // Handle map menu item click specific to this fragment
             return true;
         }
@@ -45,12 +45,12 @@ public class MichaelFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_michael, container, false);
 
         String[] emails = getResources().getStringArray(R.array.Michael_emails);
-        michaelEmailAutoCompleteEditText = view.findViewById(R.id.MichaelemailAutoCompleteEditText);
+        michaelEmailAutoCompleteEditText = view.findViewById(R.id.MicEmailAutoCompleteEditText);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_dropdown_item_1line, emails);
         michaelEmailAutoCompleteEditText.setAdapter(adapter);
         michaelEmailAutoCompleteEditText.setHint(getString(R.string.enter_email));
 
-        Button michaelSubmitButton = view.findViewById(R.id.Michaelsubmitbutton);
+        Button michaelSubmitButton = view.findViewById(R.id.MicSubmitbutton);
         michaelSubmitButton.setOnClickListener(v -> onMichaelSubmitButtonClicked());
 
         return view;

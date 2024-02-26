@@ -28,7 +28,7 @@ public class N01565129Fragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.Michaelaction_map) {
+        if (id == R.id.Micaction_map) {
             // Handle map menu item click specific to this fragment
             return true;
         }
@@ -38,9 +38,7 @@ public class N01565129Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.fragment_n01565129, container, false);
-        return view;
+        return inflater.inflate(R.layout.fragment_n01565129, container, false);
     }
 
     @Override
