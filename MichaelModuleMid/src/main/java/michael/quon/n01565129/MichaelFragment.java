@@ -2,10 +2,12 @@
 package michael.quon.n01565129;
 
 import android.os.Bundle;
+
 import androidx.fragment.app.Fragment;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -24,6 +26,17 @@ public class MichaelFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true); // Enable options menu for this fragment
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.Michaelaction_map) {
+            // Handle map menu item click specific to this fragment
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -61,10 +74,9 @@ public class MichaelFragment extends Fragment {
             Toast.makeText(requireContext(), message, Toast.LENGTH_LONG).show();
 
             // Clear user input
-            michaelEmailAutoCompleteEditText.setText("");
+            michaelEmailAutoCompleteEditText.setText(R.string.clearinput);
         }
     }
-
 
     private boolean isValidEmail(CharSequence validEmail) {
         return !TextUtils.isEmpty(validEmail) && Patterns.EMAIL_ADDRESS.matcher(validEmail).matches();

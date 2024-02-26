@@ -6,10 +6,9 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextClock;
 import android.widget.Toast;
 
 
@@ -23,6 +22,17 @@ public class N01565129Fragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true); // Enable options menu for this fragment
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.Michaelaction_map) {
+            // Handle map menu item click specific to this fragment
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -30,10 +40,6 @@ public class N01565129Fragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_n01565129, container, false);
-
-        ImageView imageView = view.findViewById(R.id.MichaelimageView);
-        TextClock textClock = view.findViewById(R.id.MichaeltextClock);
-
         return view;
     }
 
@@ -70,7 +76,6 @@ public class N01565129Fragment extends Fragment {
 
     private void stopCounter() {
         // stops counter, and displays toast with value of counter and name+id
-        Toast.makeText(requireContext(), getString(R.string.counter) + counter + " " + getString(R.string.michael_quon_id), Toast.LENGTH_LONG).show();
+        Toast.makeText(requireContext(), getString(R.string.counter) + counter + getString(R.string.spacebar) + getString(R.string.michael_quon_id), Toast.LENGTH_LONG).show();
     }
-
 }

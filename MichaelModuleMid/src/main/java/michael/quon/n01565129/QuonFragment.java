@@ -3,6 +3,7 @@ package michael.quon.n01565129;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -29,6 +30,7 @@ public class QuonFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true); // Enable options menu for this fragment
 
         // Setting up fragment result listener to receive email data
         getParentFragmentManager().setFragmentResultListener(getString(R.string.emailrequestkey), this, new FragmentResultListener() {
@@ -40,6 +42,16 @@ public class QuonFragment extends Fragment {
                 updateEmail(email);
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.Michaelaction_map) {
+            // Handle map menu item click specific to this fragment
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

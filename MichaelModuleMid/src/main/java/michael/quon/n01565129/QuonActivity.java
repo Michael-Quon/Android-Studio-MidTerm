@@ -1,6 +1,7 @@
 // Michael Quon N01565129
 package michael.quon.n01565129;
 
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 import android.os.Bundle;
@@ -16,6 +17,10 @@ public class QuonActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar toolbar = findViewById(R.id.Michaeltoolbar);
+        setSupportActionBar(toolbar);
+
 
         ArrayList<Fragment> fragmentList = new ArrayList<>();
         fragmentList.add(new MichaelFragment());
